@@ -109,4 +109,26 @@ function displayImage(imaageURL) {
     img.style.border = '2px solid #000';
     img.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
     document.body.appendChild(img);
+
+    setTimeout(() => {
+        displayMessage("YOU CANT TRUST WHAT YOU SEE SO TRUST AI TO SEE FOR YOU?");
+    }, 5000);
+
+
+}
+
+
+function displayMessage(message) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'messageDiv';
+    messageDiv.style.position = 'absolute';
+    messageDiv.style.top = '50%';
+    messageDiv.style.left = '50%';
+    messageDiv.style.fontFamily = 'boldFont, sans-serif';
+    messageDiv.style.transform = 'translate(-50%, -50%)';
+    messageDiv.style.fontSize = '4.5em';
+    messageDiv.style.color = 'red';
+    messageDiv.innerHTML = `<p>${message}</p>`;
+    document.body.appendChild(messageDiv);
+    
 }
